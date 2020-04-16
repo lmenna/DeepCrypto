@@ -29,8 +29,8 @@ start_date = "2016-06-01"
 sys.path.insert(0, os.path.join(os.getcwd(), "dataloaders" ) )
 print("Path:", sys.path)
 
-from coinmetrics import download_coinmetrics_curl
-from coinmetrics import load_crypto_datadict
+from dataloaders.coinmetrics import download_coinmetrics_curl
+from dataloaders.coinmetrics import load_crypto_datadict
 
 reload_data = False
 

@@ -18,9 +18,9 @@ from zipfile import ZipFile
 # Specify the source file for the crypto data on the coin metrics site
 coinmetrics_data_url = "https://coinmetrics.io/newdata/all.zip"
 # Specify the local zip file name for the Crypto Data set
-crypto_zipdatafile = "E:\\Users\\YGLM\\Development\\data\\all.zip"
+crypto_zipdatafile = "/Users/yglm/Documents/Development/data/all.zip"
 # Location where data files are stored
-data_dir = "E:\\Users\\YGLM\\Development\\data"
+data_dir = "/Users/yglm/Documents/Development/data"
 
 # pycurl NOT working with coinmetrics
 def download_coinmetrics_pycurl():
@@ -40,8 +40,8 @@ def download_coinmetrics_pycurl():
 def download_coinmetrics_curl():
   print(f"Downloading from {coinmetrics_data_url} to file {crypto_zipdatafile}")
   os.chdir(data_dir)
-  print(subprocess.check_output("LoadCoinmetrics.cmd", shell=True).decode())
-  print(subprocess.check_output("dir all.zip", shell=True).decode())
+  print(subprocess.check_output("/Users/yglm/Documents/Development/data/LoadCoinmetrics.sh", shell=True).decode())
+  print(subprocess.check_output("ls -l all.zip", shell=True).decode())
   print("Done downloading coinmetrics data.")
 
 def load_crypto_datadict(cryptoccy_list):

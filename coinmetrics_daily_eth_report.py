@@ -30,12 +30,13 @@ days = 14
 
 # Set path for imports.  Assumes current directory is the one where this file is in.  Usually "/user/dataloaders/"
 sys.path.insert(0, os.path.join(os.getcwd(), "dataloaders" ) )
+print("\n>>>>>> BEGIN: Daily Report.\n")
 print("Path:", sys.path)
 
-from coinmetrics import download_coinmetrics_curl
-from coinmetrics import load_crypto_datadict
+from dataloaders.coinmetrics import download_coinmetrics_curl
+from dataloaders.coinmetrics import load_crypto_datadict
 
-reload_data = False
+reload_data = True
 
 if reload_data:
   download_coinmetrics_curl()
