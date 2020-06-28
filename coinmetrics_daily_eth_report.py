@@ -109,6 +109,9 @@ def create_price_transaction_report(merged_data, days):
   ax1.axis('tight')
   ax1.axis('off')
   ax1.table(cellText=clust_data, colLabels=collabel, loc='center')
+  print(f'Report ran at {datetime.datetime.now()}')
   plt.show()
 
 create_price_transaction_report(merged_data_s, days)
+
+
